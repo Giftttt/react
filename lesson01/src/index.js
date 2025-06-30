@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from 'App';
 import reportWebVitals from './reportWebVitals';
-import App3 from './component/App3';
+// import App3 from './component/App3';
+import App4 from './component/App4';
 // import App2 from './component/App2';
 
 
@@ -18,7 +19,8 @@ root.render(
   <React.StrictMode> 
     {/* <App /> */}
     {/* <App2 /> */}
-    <App3 />
+    {/* <App3 /> */}
+    <App4 />
   </React.StrictMode>
 );
 

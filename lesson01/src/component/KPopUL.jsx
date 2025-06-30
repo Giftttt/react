@@ -1,10 +1,17 @@
 //Day1_04 : 데이터를 전달 받아 component에서 사용하기
 
 
-export default function KPopUL({members}) {
+export default function KPopUL({members, title}) {
+    // 객체 형식으로 저장된 스타일 값 정리
+    const titlestyle = {
+        color: "blue",
+        border: "1px solid gray",
+    }
+
   return (
     <div>
-        <h3>Kpop Idols</h3>
+        {/* 부모가 주는 값을 받고있음 */}
+        <h3 style={titlestyle}>{title}</h3> 
         <ul>
             {
                 members.map((item,idx) => (
@@ -25,4 +32,6 @@ export default function KPopUL({members}) {
 })
     :배열의 요소를 하나씩 가져다가 값을 item, 인덱스 번호는 idx에 저장함.
     :item, idx 값으로 함수 내용을 실행한 return 겨로가로 새로운 배열이 만들어집니다.
+    배열.map((item,idx) => (실행내용))
+                            ㄴ return 생력하는 형식(암묵적 반환)
     */
