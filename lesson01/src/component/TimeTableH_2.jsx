@@ -1,8 +1,8 @@
 // 08 : 부모 컴포넌트가 자식에게 전달하는 데이터 property 연습
                                         //  ㄴ 객체 타입 변수로 저장하기 -> 변수명 props. props는 여러 속성이 저장돼있음
-// 1번은 객체를 속성별로 나눠서 {}안에 넣고 , 2번은 하나의 객체에 
+// 1번은 객체를 속성별로 나눠서 {}안에 넣고 , 2번은 함수 인자로 객체를 저장할 변수 선언
 // 부모 컴포넌트는 app4
-import '../css/TimeTableH.css'
+// import '../css/TimeTable.css'
 export default function TimeTableH(props) {
   return (
    <>

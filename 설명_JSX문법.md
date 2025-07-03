@@ -29,7 +29,7 @@ function App() {
 
 ```jsx
 const name = "샘";
-const element = <h1>Hello, {name}!</h1>; // 태그 안에서 js 쓸때는 이런 방식
+const element = <h1>Hello, {name}!</h1>; // 태그 안에서 js 쓸때는 이런 방식 - js처럼 객체를 표현한느 게 아니라 아니라 표현식이다
 ```
 
 - JSX 안에서는 중괄호 {}로 JavaScript 표현식 사용 가능
@@ -51,9 +51,14 @@ return (
 ✅ 5. 조건부 렌더링
 
 ```jsx
+// 3항 연산
 {
   isLoggedIn ? <Logout /> : <Login />;
 }
+// if(isLoggedin)
+//  <Logout />
+//else
+//  <login />
 ```
 
 또는
@@ -70,11 +75,12 @@ return (
 
 ```jsx
 const divStyle = { color: "blue", fontSize: "16px" };
+// 값이기 때문에 "" 안에 있어야 함. 스타일을 정의한 내용을 하나의 객체로 다룸
 
 return <div style={divStyle}>Styled Text</div>;
 ```
 
-- style은 객체 형태로 작성 (camelCase 사용)
+- style은 객체 형태로 작성 (camelCase 사용 - fontSize는 css는 font-size)
 
 ✅ 7. 배열/리스트 렌더링
 
@@ -88,9 +94,11 @@ return (
   </ul>
 );
 ```
+<!-- react는 for문을 쓰지 않음 map또한 반복문-->
 
-- JSX 안에서 .map() 사용 가능
-- 반복 요소에는 반드시 key 속성 필요
+- JSX 안에서 .map() 사용 가능. 많이 사용하는 배열 method(filter, reduce)
+- 💥반복 요소에는 반드시 key 속성 필요 ex. li, td
+- key로 지정한 값은 중복이 없어야 합니다.
 
 ✅ 8. 주석 사용 방법
 
@@ -103,7 +111,7 @@ return (
 );
 ```
 
-✅ 9. Fragment (<></>)
+✅ 9. Fragment(파편, 조각) (<></>)
 
 ```jsx
 return (
@@ -118,9 +126,10 @@ return (
 - <React.Fragment> 또는 축약형 <></> 사용
 
 ✅ 10. 컴포넌트 사용
+ - 오래된 책은 클래스형 컴포넌트가 나오는데 지금은 거의 사용 안 함
 
 ```jsx
-// 정의
+// 정의 : 함수형 컴포넌트
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -131,7 +140,8 @@ function Welcome(props) {
 ```
 
 - 대문자로 시작하는 태그는 사용자 정의 컴포넌트로 인식됨
-- props를 통해 데이터 전달
+- props를 통해 데이터 전달 : 부모 component가 자식 component- 대문자로 시작 - 에게 data 전달할 때
+    ㄴ component가 계층 구조로 사용됨에 따라 필요
 
 ✅ 11. 이벤트 속성
 
@@ -140,7 +150,7 @@ function Welcome(props) {
 ```
 
 - onClick, onChange 등 DOM 이벤트는 camelCase로 작성
-- 이벤트 핸들러는 함수 참조 또는 람다식 사용 가능
+- '이벤트 핸들러'- '이벤트를 다뤄주는 애' - handleClick 등 는 함수 참조 또는 람다식(화살표 함수) 사용 가능
 
 ✅ 참고: JSX는 결국 JS
 

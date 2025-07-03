@@ -1,6 +1,6 @@
 // 부모 컴포넌트가 자식에게 전달하는 데이터 property 연습\
 // 부모 컴포넌트는 app4
-import '../css/TimeTableH.css'
+// import '../css/TimeTable.css'
 export default function TimeTableH({time, todo}) {
   return (
    <>
@@ -10,23 +10,27 @@ export default function TimeTableH({time, todo}) {
          <tbody>
              <tr>
                  <th className='theading'>TIME</th>
-                 <ul>
+                 <ul> 
             {
                 time.map((item,idx) => (
                <td key={idx} className='tdata'>{item}</td>     
             ))}
             {/* key = 반복시킬때 구별할 값을 줘 */}
             {/* jsx는 태그안에 js코드 쓸 때 꼭 중괄호 안에 씁니다. */}
-        </ul>                 
+            
+        </ul>                
              </tr>
+             </tbody>
+             <tbody>
              <tr>
                  <th className='theading'>TODO</th>
                  <ul>
+                    
             {
                 todo.map((item,idx) => (
                <td key={idx} className='tdata'>{item}</td>     
             ))}
-            {/* jsx는 태그안에 js코드 쓸 때 꼭 중괄호 안에 씁니다. */}
+            {/* jsx는 태그안에 js코드 쓸 때 꼭 중괄호 안에 씁니다 - 표현식. */}
         </ul>
              </tr>
          </tbody>

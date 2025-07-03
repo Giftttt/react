@@ -98,7 +98,7 @@ React 프로젝트를 빠르게 생성해주는 CLI 툴
 ### 🔧 vite 
 프레임워크에 상관없이 빠르고 효율적인 개발·빌드 환경을 제공하는 모던 빌드 도구
 
-        C:\class250616\React>npx create-vite@latest lesson02 --template react
+        C:\class250616\React>npx create-vite@latest lesson02 --template react (설치 없이 실행할 때 npx)
         C:\class250616\React>cd lesson02
         - 패키지 설치
         C:\class250616\React\lesson01>npm install
